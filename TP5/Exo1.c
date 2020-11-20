@@ -1,20 +1,43 @@
 #include"tab.h"
-#define TABSIZE 10
-#define TAILLEINITIALE 100
-#define TAILLEAJOUT 50
 
-int main() {
+void main() {
 
-	int MyTab1[TABSIZE];
-	initTab(&MyTab1, TABSIZE);
-	afficheTab(&MyTab1, TABSIZE, 7);
+	int MyTab1[10];
 	// Déclaration du pointeur et des variables qui mémorisent la taille du tableau
 	// et le nombre de valeurs qui y sont rangées :
-	int* myTab2 = NULL;
-	int tabSize = TAILLEINITIALE;
-	int nbElts = 0;
+	int* MyTab2 = NULL;
+	int tabSize = TAB2SIZE;
+	int nbElts = 20;
+
 	// Allocation de la mémoire :
-	myTab2 = (int*)malloc(TAILLEINITIALE * sizeof(int));
-	if (myTab2 != NULL) { initTab(myTab2, tabSize); }
+
+	MyTab2 = (int*)malloc(TAB2SIZE * sizeof(int));
+
+	if (MyTab2 != NULL) { 
+		initTab(MyTab2, tabSize); }
+
 	else { printf("mémoire insuffisante"); return(-1); }
+	
+	// remplacement des valeurs du tableau de 1 à 20
+	
+	for (int i = 0; i < nbElts; i++) {
+		MyTab2[i] = i+1;
+		
+	}
+
+	// affichage  du tableau
+	afficheTab(MyTab2, TAB2SIZE, nbElts);
+	
+	//test de la fonction ajoutElementDansTableau : 
+	int lataille = TAB2SIZE;
+	
+	for (int i = nbElts+1; i < TAB2SIZE + TAILLEAJOUT; i++) {
+		MyTab2 = ajoutElementDansTableau(MyTab2, &lataille, &nbElts, i);
+	}
+	
+	afficheTab(MyTab2, TAB2SIZE, nbElts);
+	
+	
+
+
 }
