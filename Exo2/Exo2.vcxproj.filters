@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tab.c">
+    <ClCompile Include="..\TP5\Exo2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exo1.c">
+    <ClCompile Include="fonctions.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="tab.h">
+    <ClInclude Include="deuxtab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

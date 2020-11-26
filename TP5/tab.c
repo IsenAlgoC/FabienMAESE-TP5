@@ -1,9 +1,10 @@
 #include "tab.h"
 
+
 int initTab(int* tab, int size) {
 
 
-	if ((tab == NULL) || (size < 0)) {
+	if ((tab == NULL) || (size < 0)) {		//Dans le cas où le tableau est NULL, on ne peut pas l'initialiser
 		return -1;
 	}
 
@@ -23,7 +24,8 @@ int afficheTab(int* tab, int size, int nbElts) {
 	}
 
 	
-	printf("\n");
+	printf("\n");	// pour un peu de clarté
+
 	for (int i = 0; i < nbElts; i++) {
 		printf("%d ", tab[i]);
 		
@@ -36,7 +38,7 @@ int* ajoutElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 
 
 	if ((*size <= 0) || (tab == NULL) || (*nbElts <= 0)) {
-		return NULL;
+		return 0;
 	}
 
 	if (*nbElts < *size) {				// cas où le tableau est assez grand
@@ -54,7 +56,7 @@ int* ajoutElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 
 		if (tab == NULL) {			// si la réallocation n'a pas fonctionné
 			tab = temp;
-			return NULL;
+			return 0;
 		}
 
 
@@ -63,6 +65,11 @@ int* ajoutElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 		(*nbElts)++;			
 	}
 
-	return tab;
+	return nbElts;
 
 }
+
+
+
+
+
