@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\TP5\Exo2.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="fonctions.c">
@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="deuxtab.h">
+    <ClInclude Include="tab2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
