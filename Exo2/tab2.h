@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include <stdlib.h>
-#define TAILLEINITIALE 100
+#define TAILLEINITIALE 40
 
 
 typedef struct Tableau {
